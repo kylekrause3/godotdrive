@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b5025mda0vino"
+path="res://.godot/imported/car-minibus-green.obj-bd263968ee474c96561fc339e484ed5e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/car-minibus-green.obj-bd263968ee474c96561fc339e484ed5e.mesh"]
+
+source_file="res://assets/models/OGA_vehicles_assets/car-minibus-green.obj"
+dest_files=["res://.godot/imported/car-minibus-green.obj-bd263968ee474c96561fc339e484ed5e.mesh", "res://.godot/imported/car-minibus-green.obj-bd263968ee474c96561fc339e484ed5e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://co1ry3smqch8t"
+path="res://.godot/imported/car-mpv-green.obj-44b7b79e56fd934321709c38037532af.mesh"
+
+[deps]
+
+files=["res://.godot/imported/car-mpv-green.obj-44b7b79e56fd934321709c38037532af.mesh"]
+
+source_file="res://assets/models/OGA_vehicles_assets/car-mpv-green.obj"
+dest_files=["res://.godot/imported/car-mpv-green.obj-44b7b79e56fd934321709c38037532af.mesh", "res://.godot/imported/car-mpv-green.obj-44b7b79e56fd934321709c38037532af.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

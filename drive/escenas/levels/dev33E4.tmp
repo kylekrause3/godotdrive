@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://diyrpsk7jbjtn"]
+
+[ext_resource type="Material" uid="uid://dkuf50nqh212g" path="res://assets/prototype materials/dark.tres" id="1_vbank"]
+[ext_resource type="ArrayMesh" uid="uid://dlj0xfefnyobf" path="res://assets/models/OGA_vehicles_assets/car-coupe-orange.obj" id="2_1yqss"]
+[ext_resource type="Script" path="res://escenas/levels/CarMovement.gd" id="2_fyqfn"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_i8lrv"]
+
+[sub_resource type="Sky" id="Sky_tko83"]
+sky_material = SubResource("ProceduralSkyMaterial_i8lrv")
+
+[sub_resource type="Environment" id="Environment_6kxdq"]
+background_mode = 2
+sky = SubResource("Sky_tko83")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h41y1"]
+size = Vector3(0.832125, 0.589722, 2)
+
+[node name="dev" type="Node3D"]
+
+[node name="World" type="Node3D" parent="."]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 41.5, 0, 33)
+material_override = ExtResource("1_vbank")
+use_collision = true
+size = Vector3(100, 1, 101)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="World"]
+environment = SubResource("Environment_6kxdq")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="World"]
+transform = Transform3D(1, 0, 0, 0, -0.710554, 0.703643, 0, -0.703643, -0.710554, -2.08711, 14.4491, -26.2239)
+
+[node name="Player" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="Player"]
+collision_layer = 2
+mass = 50.0
+script = ExtResource("2_fyqfn")
+
+[node name="Car-coupe-orange" type="MeshInstance3D" parent="Player/RigidBody3D"]
+mesh = ExtResource("2_1yqss")
+skeleton = NodePath("../../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Player/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000590324, 0.387512, -0.00354004)
+shape = SubResource("BoxShape3D_h41y1")
+
+[node name="Camera3D" type="Camera3D" parent="Player/RigidBody3D"]
+transform = Transform3D(-1, 1.77636e-15, -8.74228e-08, -1.16953e-08, 0.991011, 0.133779, 8.6637e-08, 0.133779, -0.991011, -2.38419e-07, 1.06284, -3.30191)
+fov = 60.0
+
+[node name="WheelBL" type="Node3D" parent="Player/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.353, 0.2, -0.646)
+
+[node name="WheelFL" type="Node3D" parent="Player/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.353, 0.2, 0.603)
+
+[node name="WheelBR" type="Node3D" parent="Player/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.353, 0.2, -0.646)
+
+[node name="WheelFR" type="Node3D" parent="Player/RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.353, 0.2, 0.603)

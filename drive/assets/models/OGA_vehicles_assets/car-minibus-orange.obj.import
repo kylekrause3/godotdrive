@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://crhhqpobbvqm7"
+path="res://.godot/imported/car-minibus-orange.obj-9dd5c4242adb0bb5d755d0a2b1aea94f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/car-minibus-orange.obj-9dd5c4242adb0bb5d755d0a2b1aea94f.mesh"]
+
+source_file="res://assets/models/OGA_vehicles_assets/car-minibus-orange.obj"
+dest_files=["res://.godot/imported/car-minibus-orange.obj-9dd5c4242adb0bb5d755d0a2b1aea94f.mesh", "res://.godot/imported/car-minibus-orange.obj-9dd5c4242adb0bb5d755d0a2b1aea94f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

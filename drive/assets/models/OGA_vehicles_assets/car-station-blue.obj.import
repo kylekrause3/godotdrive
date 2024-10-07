@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://mr6vrlkyvon4"
+path="res://.godot/imported/car-station-blue.obj-9d5fb0c4d2e9fea9f553014bae50f5b2.mesh"
+
+[deps]
+
+files=["res://.godot/imported/car-station-blue.obj-9d5fb0c4d2e9fea9f553014bae50f5b2.mesh"]
+
+source_file="res://assets/models/OGA_vehicles_assets/car-station-blue.obj"
+dest_files=["res://.godot/imported/car-station-blue.obj-9d5fb0c4d2e9fea9f553014bae50f5b2.mesh", "res://.godot/imported/car-station-blue.obj-9d5fb0c4d2e9fea9f553014bae50f5b2.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

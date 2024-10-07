@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://kipuydqgia75"
+path="res://.godot/imported/car-microtransport-violet.obj-8c3329f85684eb9c00b18eb6eb85bfe9.mesh"
+
+[deps]
+
+files=["res://.godot/imported/car-microtransport-violet.obj-8c3329f85684eb9c00b18eb6eb85bfe9.mesh"]
+
+source_file="res://assets/models/OGA_vehicles_assets/car-microtransport-violet.obj"
+dest_files=["res://.godot/imported/car-microtransport-violet.obj-8c3329f85684eb9c00b18eb6eb85bfe9.mesh", "res://.godot/imported/car-microtransport-violet.obj-8c3329f85684eb9c00b18eb6eb85bfe9.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

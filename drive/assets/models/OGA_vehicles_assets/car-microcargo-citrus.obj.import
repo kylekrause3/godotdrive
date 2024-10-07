@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dxb13x6ve800o"
+path="res://.godot/imported/car-microcargo-citrus.obj-e797a46e10454217b36ba3186b9fa5fe.mesh"
+
+[deps]
+
+files=["res://.godot/imported/car-microcargo-citrus.obj-e797a46e10454217b36ba3186b9fa5fe.mesh"]
+
+source_file="res://assets/models/OGA_vehicles_assets/car-microcargo-citrus.obj"
+dest_files=["res://.godot/imported/car-microcargo-citrus.obj-e797a46e10454217b36ba3186b9fa5fe.mesh", "res://.godot/imported/car-microcargo-citrus.obj-e797a46e10454217b36ba3186b9fa5fe.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

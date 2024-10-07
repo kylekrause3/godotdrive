@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bnb3kq5wncoe"
+path="res://.godot/imported/car-coupe-silver.obj-f12ffe96cddf2c6ad45199017d14ceff.mesh"
+
+[deps]
+
+files=["res://.godot/imported/car-coupe-silver.obj-f12ffe96cddf2c6ad45199017d14ceff.mesh"]
+
+source_file="res://assets/models/OGA_vehicles_assets/car-coupe-silver.obj"
+dest_files=["res://.godot/imported/car-coupe-silver.obj-f12ffe96cddf2c6ad45199017d14ceff.mesh", "res://.godot/imported/car-coupe-silver.obj-f12ffe96cddf2c6ad45199017d14ceff.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

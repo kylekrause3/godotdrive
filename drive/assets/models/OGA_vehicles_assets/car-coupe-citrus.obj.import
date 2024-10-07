@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b7qeoc40dpiib"
+path="res://.godot/imported/car-coupe-citrus.obj-8ede64565e2a373e7bfdd7b3a3d75202.mesh"
+
+[deps]
+
+files=["res://.godot/imported/car-coupe-citrus.obj-8ede64565e2a373e7bfdd7b3a3d75202.mesh"]
+
+source_file="res://assets/models/OGA_vehicles_assets/car-coupe-citrus.obj"
+dest_files=["res://.godot/imported/car-coupe-citrus.obj-8ede64565e2a373e7bfdd7b3a3d75202.mesh", "res://.godot/imported/car-coupe-citrus.obj-8ede64565e2a373e7bfdd7b3a3d75202.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bamffsotl30ng"
+path="res://.godot/imported/car-normal-silver.obj-057e5aa8574a97a30af9d7a2ae470939.mesh"
+
+[deps]
+
+files=["res://.godot/imported/car-normal-silver.obj-057e5aa8574a97a30af9d7a2ae470939.mesh"]
+
+source_file="res://assets/models/OGA_vehicles_assets/car-normal-silver.obj"
+dest_files=["res://.godot/imported/car-normal-silver.obj-057e5aa8574a97a30af9d7a2ae470939.mesh", "res://.godot/imported/car-normal-silver.obj-057e5aa8574a97a30af9d7a2ae470939.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b0xswvi7re5lm"
+path="res://.godot/imported/car-van-violet.obj-1e93d30cf8d05910344b4954e4b61620.mesh"
+
+[deps]
+
+files=["res://.godot/imported/car-van-violet.obj-1e93d30cf8d05910344b4954e4b61620.mesh"]
+
+source_file="res://assets/models/OGA_vehicles_assets/car-van-violet.obj"
+dest_files=["res://.godot/imported/car-van-violet.obj-1e93d30cf8d05910344b4954e4b61620.mesh", "res://.godot/imported/car-van-violet.obj-1e93d30cf8d05910344b4954e4b61620.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

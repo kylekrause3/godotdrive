@@ -1,0 +1,10 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cb76n7ulmnk0r"]
+
+[ext_resource type="Texture2D" uid="uid://bp1voy6cmxqxu" path="res://assets/prototype materials/green.png" id="1_laekm"]
+
+[resource]
+albedo_texture = ExtResource("1_laekm")
+uv1_scale = Vector3(0.125, 0.125, 0.125)
+uv1_triplanar = true
+uv1_world_triplanar = true
+texture_filter = 4

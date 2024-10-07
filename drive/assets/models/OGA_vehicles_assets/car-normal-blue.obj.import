@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://covaxonunt0e7"
+path="res://.godot/imported/car-normal-blue.obj-4a3bf64b29a28f5e2b1b9712aea428b5.mesh"
+
+[deps]
+
+files=["res://.godot/imported/car-normal-blue.obj-4a3bf64b29a28f5e2b1b9712aea428b5.mesh"]
+
+source_file="res://assets/models/OGA_vehicles_assets/car-normal-blue.obj"
+dest_files=["res://.godot/imported/car-normal-blue.obj-4a3bf64b29a28f5e2b1b9712aea428b5.mesh", "res://.godot/imported/car-normal-blue.obj-4a3bf64b29a28f5e2b1b9712aea428b5.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

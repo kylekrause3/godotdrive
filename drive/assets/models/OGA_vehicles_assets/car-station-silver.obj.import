@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ddevph3bvhos"
+path="res://.godot/imported/car-station-silver.obj-8a6b35a0bd64f185b8f761d0bcdf380a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/car-station-silver.obj-8a6b35a0bd64f185b8f761d0bcdf380a.mesh"]
+
+source_file="res://assets/models/OGA_vehicles_assets/car-station-silver.obj"
+dest_files=["res://.godot/imported/car-station-silver.obj-8a6b35a0bd64f185b8f761d0bcdf380a.mesh", "res://.godot/imported/car-station-silver.obj-8a6b35a0bd64f185b8f761d0bcdf380a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

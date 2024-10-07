@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c0e3dxlwmavfu"
+path="res://.godot/imported/car-hatchback-red.obj-298a2c70b0c2ec8e1b05c0f8d447d987.mesh"
+
+[deps]
+
+files=["res://.godot/imported/car-hatchback-red.obj-298a2c70b0c2ec8e1b05c0f8d447d987.mesh"]
+
+source_file="res://assets/models/OGA_vehicles_assets/car-hatchback-red.obj"
+dest_files=["res://.godot/imported/car-hatchback-red.obj-298a2c70b0c2ec8e1b05c0f8d447d987.mesh", "res://.godot/imported/car-hatchback-red.obj-298a2c70b0c2ec8e1b05c0f8d447d987.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
