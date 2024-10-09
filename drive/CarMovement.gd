@@ -71,7 +71,7 @@ func handle_wheel_force(wheel : Node3D, grip_amount : float, drive_wheel : bool,
 		# velocity along spring direction
 		var springwardvelocity : float = car_up.dot(wheelpointvelocity)
 		var suspensionacceleration : float = ((offset - 0.08) * spring_strength) - (springwardvelocity * spring_damper)
-		suspensionacceleration = clamp(suspensionacceleration, 0, mass * gravity_scale * 9.8 / 2)
+		suspensionacceleration = clamp(suspensionacceleration, 0, mass * gravity_scale * 9.8)
 		susp_force = suspensionacceleration * car_up
 		apply_force(susp_force, wheel.position)
 		LineDrawer.DrawLine(wheel.global_position, wheel.global_position + (susp_force /100), Color(0, 1, 0, 1))
@@ -82,7 +82,7 @@ func handle_wheel_force(wheel : Node3D, grip_amount : float, drive_wheel : bool,
 		# we want to be pushed in the opposite direction as how much velocity is perpendicular to our wheels
 		var sidewaysacceleration = ((-rightwardvelocity) * grip_amount)
 		sideways_force = sidewaysacceleration * wheel_right
-		apply_force(sideways_force, wheel.position)
+		apply_force(sideways_force, Vector3(wheel.position.x, 0, wheel.position.z))
 		LineDrawer.DrawLine(wheel.global_position, wheel.global_position + (sideways_force /100), Color(1, 0, 0))
 		
 		var throttle = Input.get_axis("backward", "forward")

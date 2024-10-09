@@ -47,9 +47,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="Player"]
 collision_layer = 2
-mass = 40.0
+mass = 60.0
 continuous_cd = true
 script = ExtResource("2_fyqfn")
+spring_damper = 10.0
 height_from_ground = 0.5
 front_tire_grip_pct = 1.0
 back_tire_grip_pct = 1.0
