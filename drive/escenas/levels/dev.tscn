@@ -1,8 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://diyrpsk7jbjtn"]
+[gd_scene load_steps=14 format=3 uid="uid://diyrpsk7jbjtn"]
 
 [ext_resource type="Material" uid="uid://dkuf50nqh212g" path="res://assets/prototype materials/dark.tres" id="1_vbank"]
 [ext_resource type="ArrayMesh" uid="uid://dlj0xfefnyobf" path="res://assets/models/OGA_vehicles_assets/car-coupe-orange.obj" id="2_1yqss"]
 [ext_resource type="Script" path="res://CarMovement.gd" id="2_fyqfn"]
+[ext_resource type="Curve" uid="uid://t4mmtkoyplv2" path="res://assets/misc/torque_curve.tres" id="3_ihhg5"]
+[ext_resource type="Curve" uid="uid://bwgoq0173i2mf" path="res://assets/misc/turning_radius_curve.tres" id="4_foqw1"]
+[ext_resource type="Script" path="res://CameraSwitcher.gd" id="6_iejyx"]
+[ext_resource type="Script" path="res://FollowCam.gd" id="6_moigr"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_i8lrv"]
 
@@ -13,14 +17,12 @@ sky_material = SubResource("ProceduralSkyMaterial_i8lrv")
 background_mode = 2
 sky = SubResource("Sky_tko83")
 
-[sub_resource type="Curve" id="Curve_xiofb"]
-_data = [Vector2(0, 1), 0.0, 0.0, 0, 0]
-point_count = 1
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_h41y1"]
 size = Vector3(0.8, 0.5, 2)
 
 [sub_resource type="BoxMesh" id="BoxMesh_5liuh"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_5joqd"]
 
 [node name="dev" type="Node3D"]
 
@@ -39,7 +41,7 @@ environment = SubResource("Environment_6kxdq")
 transform = Transform3D(1, 0, 0, 0, -0.710554, 0.703643, 0, -0.703643, -0.710554, -2.08711, 14.4491, -26.2239)
 
 [node name="Camera3D2" type="Camera3D" parent="World"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -5.58532, 1.72611, -0.0520999)
+transform = Transform3D(-0.731725, -0.504938, 0.457838, -0.00133002, 0.672767, 0.739853, -0.681598, 0.54076, -0.492952, 11.4147, 22.0004, -9.0521)
 fov = 87.0
 
 [node name="Player" type="Node3D" parent="."]
@@ -47,14 +49,17 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 
 [node name="RigidBody3D" type="RigidBody3D" parent="Player"]
 collision_layer = 2
-mass = 60.0
+mass = 100.0
 continuous_cd = true
 script = ExtResource("2_fyqfn")
-spring_damper = 10.0
-height_from_ground = 0.5
-front_tire_grip_pct = 1.0
+spring_strength = 500.0
+front_tire_grip_pct = 0.85
 back_tire_grip_pct = 1.0
-engine_torque = SubResource("Curve_xiofb")
+maxTurnDegrees = 45
+speed = 150.0
+top_speed = 20.0
+engine_torque = ExtResource("3_ihhg5")
+turning_radius = ExtResource("4_foqw1")
 
 [node name="Car-coupe-orange" type="MeshInstance3D" parent="Player/RigidBody3D"]
 mesh = ExtResource("2_1yqss")
@@ -64,23 +69,39 @@ skeleton = NodePath("../../..")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.35, 0)
 shape = SubResource("BoxShape3D_h41y1")
 
-[node name="Camera3D" type="Camera3D" parent="Player/RigidBody3D"]
-transform = Transform3D(-1, 1.77636e-15, -8.74228e-08, -1.16953e-08, 0.991011, 0.133779, 8.6637e-08, 0.133779, -0.991011, -2.38419e-07, 1.06284, -3.30191)
-current = true
-fov = 60.0
+[node name="WheelBL" type="Node3D" parent="Player/RigidBody3D/CollisionShape3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35, -0.174534, -0.6)
 
-[node name="WheelBL" type="Node3D" parent="Player/RigidBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35, 0.2, -0.6)
+[node name="WheelFL" type="Node3D" parent="Player/RigidBody3D/CollisionShape3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35, -0.174534, 0.6)
 
-[node name="WheelFL" type="Node3D" parent="Player/RigidBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.35, 0.2, 0.6)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Player/RigidBody3D/WheelFL"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Player/RigidBody3D/CollisionShape3D/WheelFL"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.14335)
 mesh = SubResource("BoxMesh_5liuh")
 
-[node name="WheelBR" type="Node3D" parent="Player/RigidBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35, 0.2, -0.6)
+[node name="WheelBR" type="Node3D" parent="Player/RigidBody3D/CollisionShape3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35, -0.174534, -0.6)
 
-[node name="WheelFR" type="Node3D" parent="Player/RigidBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35, 0.2, 0.6)
+[node name="WheelFR" type="Node3D" parent="Player/RigidBody3D/CollisionShape3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.35, -0.174534, 0.6)
+
+[node name="FollowCam" type="Camera3D" parent="." node_paths=PackedStringArray("FollowTarget")]
+transform = Transform3D(-1, 3.9968e-14, -8.74228e-08, -1.16953e-08, 0.991011, 0.133779, 8.6637e-08, 0.133779, -0.991011, -2.38419e-07, 4.06284, -3.30191)
+cull_mask = 1048063
+current = true
+fov = 68.3
+script = ExtResource("6_moigr")
+FollowTarget = NodePath("../Player/RigidBody3D")
+FollowRadius = 3.0
+CameraPositionOffset = Vector3(0, 0.75, 0)
+CameraAcceleration = 9.0
+CameraXRotAcceleration = 2.0
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="FollowCam"]
+transform = Transform3D(0.965926, 0.0998299, -0.238791, -0.0346246, 0.964168, 0.263025, 0.256493, -0.245794, 0.934771, 0, 0, 0)
+layers = 512
+mesh = SubResource("CylinderMesh_5joqd")
+
+[node name="CameraSwitcher" type="Node3D" parent="." node_paths=PackedStringArray("cameras")]
+script = ExtResource("6_iejyx")
+cameras = [NodePath("../FollowCam"), NodePath("../World/Camera3D2")]

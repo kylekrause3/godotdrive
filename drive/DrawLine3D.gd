@@ -16,7 +16,7 @@ class Line:
 var Lines = []
 var RemovedLine = false
 
-func _process(delta):
+func _physics_process(delta):
 	for i in range(len(Lines)):
 		Lines[i].time -= delta
 	
