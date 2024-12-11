@@ -14,4 +14,4 @@
 ./drive/data_*/
 ./drive/mono_crash.*.json
 
-./builds/*
+./builds/
