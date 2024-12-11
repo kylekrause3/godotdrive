@@ -30,6 +30,10 @@ func _physics_process(delta):
 	
 	# rotation
 	self.rotation = Vector3(0, 0, 0)
+	if (deg_to_rad(180) + FollowTarget.rotation.y) - lastYRot > deg_to_rad(180):
+		lastYRot += deg_to_rad(360)
+	if (deg_to_rad(180) + FollowTarget.rotation.y) - lastYRot < -deg_to_rad(180):
+		lastYRot -= deg_to_rad(360)
 	self.rotation.y = lerp(lastYRot, deg_to_rad(180) + FollowTarget.rotation.y, CameraYRotAcceleration * delta)
 	lastYRot = deg_to_rad(180) + FollowTarget.rotation.y
 	self.rotation.x = lerp(lastXRot, deg_to_rad(FollowAngleDeg)  - FollowTarget.rotation.x, CameraXRotAcceleration * delta)
